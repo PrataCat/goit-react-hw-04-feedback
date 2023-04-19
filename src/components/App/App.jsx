@@ -14,22 +14,22 @@ function App() {
   function handleLeaveFeedback(variant) {
     switch (variant) {
       case 'good':
-        setGoodRating(good + 1);
+        setGoodRating(prevState => prevState + 1);
         break;
 
       case 'neutral':
-        setNeutralRating(neutral + 1);
+        setNeutralRating(prevState => prevState + 1);
         break;
 
       case 'bad':
-        setBadRating(bad + 1);
+        setBadRating(prevState => prevState + 1);
         break;
 
       default:
         break;
     }
 
-    setTotalFeedback(total + 1);
+    setTotalFeedback(prevState => prevState + 1);
   }
 
   function countPositiveFeedbackPercentage() {
