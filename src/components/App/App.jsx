@@ -1,5 +1,4 @@
 import { useState } from 'react';
-import PropTypes from 'prop-types';
 import Section from '../Section/Section';
 import FeedbackOptions from '../FeedbackOptions/FeedbackOptions';
 import Notification from '../Notification/Notification';
@@ -59,15 +58,5 @@ function App() {
     </div>
   );
 }
-
-Statistics.propTypes = {
-  state: PropTypes.shape({
-    good: PropTypes.number.isRequired,
-    neutral: PropTypes.number.isRequired,
-    bad: PropTypes.number.isRequired,
-  }),
-  total: PropTypes.number.isRequired,
-  positivePercentage: PropTypes.func.isRequired,
-};
 
 export default App;
